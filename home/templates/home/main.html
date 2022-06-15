@@ -7,7 +7,8 @@
 <div class="text-center">
     <h2>Bienvenido {{ user.username }}</h2>
     <h3><a style="color: rgb(3, 36, 184)" href="{% url 'user:avatar-load' %}">Cambiar Avatar</a></h3>
-    <img height="160px" src="{{url}}" alt="">
+    
+    <img src="{{url}}" class='imgCircleMax' alt="Image profile" />
 </div>
 {% endif %}
 <h2>Buscador de cursos</h2>
@@ -20,7 +21,7 @@
         {% if search_param %} value="{{ search_param }}" {% endif %}
         >
         <input type="submit" value="Buscar">
-        <a style="color: blue" href="{% url 'home:main' %}"><i class="fa fa-undo"></i></a>
+        <a style="color: black" href="{% url 'home:main' %}"><i class="fa fa-undo"></i></a>
     </div>
 
 </form>
